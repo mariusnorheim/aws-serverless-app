@@ -16,9 +16,17 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@api/*": ["./pages/api/*"],
+      "@components/*": ["./components/*"],
+      "@lib/*": ["./lib/*"],
+      "@styles/*": ["./styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
 }
